@@ -1,0 +1,223 @@
+  #0  0x400014d9:0x3ffb9ec0 in ?? ??:0
+  #1  0x40001456:0x3ffb9ed0 in ?? ??:0
+  #2  0x40001445:0x3ffb9ef0 in ?? ??:0
+  #3  0x400d3e36:0x3ffb9f10 in esp_mqtt_set_if_config at C:\Users\CADIT-IDN\.platformio\packages\framework-espidf\components\mqtt\esp-mqtt/mqtt_client.c:262
+  #4  0x400d4138:0x3ffb9f30 in esp_mqtt_set_config at C:\Users\CADIT-IDN\.platformio\packages\framework-espidf\components\mqtt\esp-mqtt/mqtt_client.c:379 (discriminator 2)
+  #5  0x400d4917:0x3ffb9f60 in esp_mqtt_client_init at C:\Users\CADIT-IDN\.platformio\packages\framework-espidf\components\mqtt\esp-mqtt/mqtt_client.c:774
+  #6  0x400d238a:0x3ffb9fb0 in mqtt_app_start at src/main.c:190
+  #7  0x400d2757:0x3ffba080 in wifi_init_sta at src/main.c:109 (discriminator 13)
+  #8  0x400d283a:0x3ffba200 in app_main at src/main.c:226 (discriminator 13)
+  #9  0x4015f88f:0x3ffba230 in main_task at C:\Users\CADIT-IDN\.platformio\packages\framework-espidf\components\freertos\FreeRTOS-Kernel\portable/port_common.c:131 (discriminator 2)
+  #10 0x4008bc41:0x3ffba260 in vPortTaskWrapper at C:\Users\CADIT-IDN\.platformio\packages\framework-espidf\components\freertos\FreeRTOS-Kernel\portable\xtensa/port.c:151
+
+
+
+
+ELF file SHA256: fc17c14aa61e40f9
+
+Rebooting...
+ets Jun  8 2016 00:22:57
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6992
+load:0x40078000,len:15452
+load:0x40080400,len:3840
+entry 0x4008064c
+I (27) boot: ESP-IDF 5.0.0 2nd stage bootloader
+I (27) boot: compile time 16:20:24
+I (27) boot: chip revision: v1.0
+I (30) boot_comm: chip revision: 1, min. bootloader chip revision: 0
+I (37) boot.esp32: SPI Speed      : 40MHz
+I (42) boot.esp32: SPI Mode       : DIO
+I (46) boot.esp32: SPI Flash Size : 4MB
+I (51) boot: Enabling RNG early entropy source...
+I (56) boot: Partition Table:
+I (60) boot: ## Label            Usage          Type ST Offset   Length
+I (67) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+I (75) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+I (82) boot:  2 factory          factory app      00 00 00010000 00100000
+I (90) boot: End of partition table
+I (94) boot_comm: chip revision: 1, min. application chip revision: 0
+I (101) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=22dc0h (142784) map
+I (161) esp_image: segment 1: paddr=00032de8 vaddr=3ffb0000 size=03b50h ( 15184) load
+I (167) esp_image: segment 2: paddr=00036940 vaddr=40080000 size=096d8h ( 38616) load
+I (183) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=91098h (594072) map
+I (398) esp_image: segment 4: paddr=000d10c0 vaddr=400896d8 size=0b6a8h ( 46760) load
+I (417) esp_image: segment 5: paddr=000dc770 vaddr=50000000 size=00010h (    16) load
+I (428) boot: Loaded app from partition at offset 0x10000
+I (428) boot: Disabling RNG early entropy source...
+I (440) cpu_start: Pro cpu up.
+I (440) cpu_start: Starting app cpu, entry point is 0x40081328
+I (427) cpu_start: App cpu up.
+I (457) cpu_start: Pro cpu start user code
+I (457) cpu_start: cpu freq: 160000000 Hz
+I (457) cpu_start: Application information:
+I (461) cpu_start: Project name:     ESP-IDF-HELLO
+I (467) cpu_start: App version:      1
+I (471) cpu_start: Compile time:     Feb 27 2023 16:20:06
+I (477) cpu_start: ELF file SHA256:  fc17c14aa61e40f9...
+I (483) cpu_start: ESP-IDF:          5.0.0
+I (488) heap_init: Initializing. RAM available for dynamic allocation:
+I (495) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM
+I (501) heap_init: At 3FFB7AE0 len 00028520 (161 KiB): DRAM
+I (508) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM
+I (514) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+I (521) heap_init: At 40094D80 len 0000B280 (44 KiB): IRAM
+I (528) spi_flash: detected chip: generic
+I (531) spi_flash: flash io: dio
+I (537) cpu_start: Starting scheduler on PRO CPU.
+I (0) cpu_start: Starting scheduler on APP CPU.
+I (605) wifiStation: ESP_WIFI_MODE_STA
+I (615) wifi:wifi driver task: 3ffc0390, prio:23, stack:6656, core=0
+I (615) system_api: Base MAC address is not set
+I (615) system_api: read default base MAC address from EFUSE
+I (635) wifi:wifi firmware version: 0d470ef
+I (635) wifi:wifi certification version: v7.0
+I (635) wifi:config NVS flash: enabled
+I (635) wifi:config nano formating: disabled
+I (635) wifi:Init data frame dynamic rx buffer num: 32
+I (645) wifi:Init management frame dynamic rx buffer num: 32
+I (645) wifi:Init management short buffer num: 32
+I (655) wifi:Init dynamic tx buffer num: 32
+I (655) wifi:Init static rx buffer size: 1600
+I (665) wifi:Init static rx buffer num: 10
+I (665) wifi:Init dynamic rx buffer num: 32
+I (675) wifi_init: rx ba win: 6
+I (675) wifi_init: tcpip mbox: 32
+I (675) wifi_init: udp mbox: 6
+I (685) wifi_init: tcp mbox: 6
+I (685) wifi_init: tcp tx win: 5744
+I (685) wifi_init: tcp rx win: 5744
+I (695) wifi_init: tcp mss: 1440
+I (695) wifi_init: WiFi IRAM OP enabled
+I (705) wifi_init: WiFi RX IRAM OP enabled
+I (705) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07
+I (825) wifi:mode : sta (3c:71:bf:58:fe:08)
+I (835) wifi:enable tsf
+I (835) wifiStation: wifi_init_sta finished
+I (845) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (845) wifi:state: init -> auth (b0)
+I (855) wifi:state: auth -> assoc (0)
+I (855) wifi:state: assoc -> run (10)
+I (875) wifi:connected with CADIT-VPN-27, aid = 2, channel 11, BW20, bssid = 48:2f:6b:62:6f:21
+I (875) wifi:security: WPA2-PSK, phy: bgn, rssi: -62
+I (885) wifi:pm start, type: 1
+
+I (915) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+W (925) wifi:<ba-add>idx:0 (ifx:0, 48:2f:6b:62:6f:21), tid:0, ssn:0, winSize:64
+I (1605) esp_netif_handlers: sta ip: 10.1.20.205, mask: 255.255.255.0, gw: 10.1.20.1
+I (1605) wifiStation: got ip:10.1.20.205
+I (1605) wifiStation: connected to ap SSID:CADIT-VPN-27 passwordVPN@2527
+I (1615) wifiStation: STARTING MQTT
+I (1615) wifiStation: STARTING MQTT 2
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400014dc  PS      : 0x00060130  A0      : 0x80001459  A1      : 0x3ffb9ec0
+A2      : 0x00000011  A3      : 0x0000000d  A4      : 0x000000ff  A5      : 0x0000ff00  
+A6      : 0x00ff0000  A7      : 0xff000000  A8      : 0x8008b932  A9      : 0x3ffb9e90
+A10     : 0x3ffba2f0  A11     : 0x00000004  A12     : 0x3ffaed60  A13     : 0x00000000  
+A14     : 0x3f400120  A15     : 0x0000cdcd  SAR     : 0x0000001d  EXCCAUSE: 0x0000001c
+EXCVADDR: 0x00000011  LBEG    : 0x4000c2e0  LEND    : 0x4000c2f6  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x400014d9:0x3ffb9ec0 0x40001456:0x3ffb9ed0 0x40001445:0x3ffb9ef0 0x400d3e36:0x3ffb9f10 0x400d4138:0x3ffb9f30 0x400d4917:0x3ffb9f60 0x400d238a:0x3ffb9fb0 0x400d2757:0x3ffba080 0x400d283a:0x3ffba200 0x4015f88f:0x3ffba230 0x4008bc41:0x3ffba260
+
+  #0  0x400014d9:0x3ffb9ec0 in ?? ??:0
+  #1  0x40001456:0x3ffb9ed0 in ?? ??:0
+  #2  0x40001445:0x3ffb9ef0 in ?? ??:0
+  #3  0x400d3e36:0x3ffb9f10 in esp_mqtt_set_if_config at C:\Users\CADIT-IDN\.platformio\packages\framework-espidf\components\mqtt\esp-mqtt/mqtt_client.c:262
+  #4  0x400d4138:0x3ffb9f30 in esp_mqtt_set_config at C:\Users\CADIT-IDN\.platformio\packages\framework-espidf\components\mqtt\esp-mqtt/mqtt_client.c:379 (discriminator 2)
+  #5  0x400d4917:0x3ffb9f60 in esp_mqtt_client_init at C:\Users\CADIT-IDN\.platformio\packages\framework-espidf\components\mqtt\esp-mqtt/mqtt_client.c:774
+  #6  0x400d238a:0x3ffb9fb0 in mqtt_app_start at src/main.c:190
+  #7  0x400d2757:0x3ffba080 in wifi_init_sta at src/main.c:109 (discriminator 13)
+  #8  0x400d283a:0x3ffba200 in app_main at src/main.c:226 (discriminator 13)
+  #9  0x4015f88f:0x3ffba230 in main_task at C:\Users\CADIT-IDN\.platformio\packages\framework-espidf\components\freertos\FreeRTOS-Kernel\portable/port_common.c:131 (discriminator 2)
+  #10 0x4008bc41:0x3ffba260 in vPortTaskWrapper at C:\Users\CADIT-IDN\.platformio\packages\framework-espidf\components\freertos\FreeRTOS-Kernel\portable\xtensa/port.c:151
+
+
+
+
+ELF file SHA256: fc17c14aa61e40f9
+
+Rebooting...
+ets Jun  8 2016 00:22:57
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6992
+load:0x40078000,len:15452
+load:0x40080400,len:3840
+entry 0x4008064c
+I (27) boot: ESP-IDF 5.0.0 2nd stage bootloader
+I (27) boot: compile time 16:20:24
+I (27) boot: chip revision: v1.0
+I (30) boot_comm: chip revision: 1, min. bootloader chip revision: 0
+I (37) boot.esp32: SPI Speed      : 40MHz
+I (42) boot.esp32: SPI Mode       : DIO
+I (46) boot.esp32: SPI Flash Size : 4MB
+I (51) boot: Enabling RNG early entropy source...
+I (56) boot: Partition Table:
+I (60) boot: ## Label            Usage          Type ST Offset   Length
+I (67) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+I (75) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+I (82) boot:  2 factory          factory app      00 00 00010000 00100000
+I (90) boot: End of partition table
+I (94) boot_comm: chip revision: 1, min. application chip revision: 0
+I (101) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=22dc0h (142784) map
+I (161) esp_image: segment 1: paddr=00032de8 vaddr=3ffb0000 size=03b50h ( 15184) load
+I (167) esp_image: segment 2: paddr=00036940 vaddr=40080000 size=096d8h ( 38616) load
+I (183) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=91098h (594072) map
+I (398) esp_image: segment 4: paddr=000d10c0 vaddr=400896d8 size=0b6a8h ( 46760) load
+I (417) esp_image: segment 5: paddr=000dc770 vaddr=50000000 size=00010h (    16) load
+I (428) boot: Loaded app from partition at offset 0x10000
+I (428) boot: Disabling RNG early entropy source...
+I (440) cpu_start: Pro cpu up.
+I (440) cpu_start: Starting app cpu, entry point is 0x40081328
+I (427) cpu_start: App cpu up.
+I (457) cpu_start: Pro cpu start user code
+I (457) cpu_start: cpu freq: 160000000 Hz
+I (457) cpu_start: Application information:
+I (461) cpu_start: Project name:     ESP-IDF-HELLO
+I (467) cpu_start: App version:      1
+I (471) cpu_start: Compile time:     Feb 27 2023 16:20:06
+I (477) cpu_start: ELF file SHA256:  fc17c14aa61e40f9...
+I (483) cpu_start: ESP-IDF:          5.0.0
+I (488) heap_init: Initializing. RAM available for dynamic allocation:
+I (495) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM
+I (501) heap_init: At 3FFB7AE0 len 00028520 (161 KiB): DRAM
+I (508) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM
+I (514) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+I (521) heap_init: At 40094D80 len 0000B280 (44 KiB): IRAM
+I (528) spi_flash: detected chip: generic
+I (531) spi_flash: flash io: dio
+I (537) cpu_start: Starting scheduler on PRO CPU.
+I (0) cpu_start: Starting scheduler on APP CPU.
+I (605) wifiStation: ESP_WIFI_MODE_STA
+I (615) wifi:wifi driver task: 3ffc0390, prio:23, stack:6656, core=0
+I (615) system_api: Base MAC address is not set
+I (615) system_api: read default base MAC address from EFUSE
+I (635) wifi:wifi firmware version: 0d470ef
+I (635) wifi:wifi certification version: v7.0
+I (635) wifi:config NVS flash: enabled
+I (635) wifi:config nano formating: disabled
+I (635) wifi:Init data frame dynamic rx buffer num: 32
+I (645) wifi:Init management frame dynamic rx buffer num: 32
+I (645) wifi:Init management short buffer num: 32
+I (655) wifi:Init dynamic tx buffer num: 32
+I (655) wifi:Init static rx buffer size: 1600
+I (665) wifi:Init static rx buffer num: 10
+I (665) wifi:Init dynamic rx buffer num: 32
+I (675) wifi_init: rx ba win: 6
+I (675) wifi_init: tcpip mbox: 32
+I (675) wifi_init: udp mbox: 6
+I (685) wifi_init: tcp mbox: 6
+I (685) wifi_init: tcp tx win: 5744
+I (685) wifi_init: tcp rx win: 5744
+I (695) wifi_init: tcp mss: 1440
+I (695) wifi_init: WiFi IRAM OP enabled
